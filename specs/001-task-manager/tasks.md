@@ -25,11 +25,11 @@
 
 **Purpose**: Initialize the smallest Next.js App Router project structure needed for the feature.
 
-- [ ] T001 Create `package.json` with Next.js, React, React DOM, TypeScript scripts, and no test script
-- [ ] T002 [P] Create `tsconfig.json` configured for a TypeScript Next.js App Router project
-- [ ] T003 [P] Create `next.config.ts` with the minimal Next.js configuration
-- [ ] T004 [P] Create `app/layout.tsx` with application metadata and root HTML structure
-- [ ] T005 [P] Create `app/globals.css` with base responsive styling and design tokens
+- [X] T001 Create `package.json` with Next.js, React, React DOM, TypeScript scripts, and no test script
+- [X] T002 [P] Create `tsconfig.json` configured for a TypeScript Next.js App Router project
+- [X] T003 [P] Create `next.config.ts` with the minimal Next.js configuration
+- [X] T004 [P] Create `app/layout.tsx` with application metadata and root HTML structure
+- [X] T005 [P] Create `app/globals.css` with base responsive styling and design tokens
 
 ---
 
@@ -39,10 +39,10 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T006 Create task, priority, status, and filter TypeScript types in `types/task.ts`
-- [ ] T007 Create localStorage load/save helpers with version handling in `lib/task-storage.ts`
-- [ ] T008 [P] Create pure task filtering helpers in `lib/task-filters.ts`
-- [ ] T009 Create the client-side application shell in `app/page.tsx` with initial task and filter state
+- [X] T006 Create task, priority, status, and filter TypeScript types in `types/task.ts`
+- [X] T007 Create localStorage load/save helpers with version handling in `lib/task-storage.ts`
+- [X] T008 [P] Create pure task filtering helpers in `lib/task-filters.ts`
+- [X] T009 Create the client-side application shell in `app/page.tsx` with initial task and filter state
 
 **Checkpoint**: Foundation ready - user story implementation can now begin.
 
@@ -56,11 +56,11 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [P] [US1] Create task creation form fields and submit UI in `components/TaskForm.tsx`
-- [ ] T011 [P] [US1] Create task display list for title, description, due date, priority, and status in `components/TaskList.tsx`
-- [ ] T012 [US1] Wire task creation, validation messages, form reset, and localStorage persistence in `app/page.tsx`
-- [ ] T013 [US1] Add required title and required due date validation behavior in `components/TaskForm.tsx`
-- [ ] T014 [US1] Manually validate quickstart scenarios 1, 2, and 3 using `specs/001-task-manager/quickstart.md`
+- [X] T010 [P] [US1] Create task creation form fields and submit UI in `components/TaskForm.tsx`
+- [X] T011 [P] [US1] Create task display list for title, description, due date, priority, and status in `components/TaskList.tsx`
+- [X] T012 [US1] Wire task creation, validation messages, form reset, and localStorage persistence in `app/page.tsx`
+- [X] T013 [US1] Add required title and required due date validation behavior in `components/TaskForm.tsx`
+- [X] T014 [US1] Manually validate quickstart scenarios 1, 2, and 3 using `specs/001-task-manager/quickstart.md`
 
 **Checkpoint**: User Story 1 is fully functional and manually validated independently.
 
@@ -74,9 +74,9 @@
 
 ### Implementation for User Story 2
 
-- [ ] T015 [US2] Add per-task status selection control in `components/TaskList.tsx`
-- [ ] T016 [US2] Implement status update handling, updatedAt changes, and localStorage persistence in `app/page.tsx`
-- [ ] T017 [US2] Manually validate quickstart scenario 4 using `specs/001-task-manager/quickstart.md`
+- [X] T015 [US2] Add per-task status selection control in `components/TaskList.tsx`
+- [X] T016 [US2] Implement status update handling, updatedAt changes, and localStorage persistence in `app/page.tsx`
+- [X] T017 [US2] Manually validate quickstart scenario 4 using `specs/001-task-manager/quickstart.md`
 
 **Checkpoint**: User Stories 1 and 2 both work and are manually validated independently.
 
@@ -90,10 +90,10 @@
 
 ### Implementation for User Story 3
 
-- [ ] T018 [P] [US3] Create priority, status, due date, and clear filter controls in `components/TaskFilters.tsx`
-- [ ] T019 [US3] Connect active filters and filtered task rendering in `app/page.tsx`
-- [ ] T020 [US3] Add no-tasks and no-matching-tasks empty states in `components/TaskList.tsx`
-- [ ] T021 [US3] Manually validate quickstart scenarios 5, 6, 7, 8, and 9 using `specs/001-task-manager/quickstart.md`
+- [X] T018 [P] [US3] Create priority, status, due date, and clear filter controls in `components/TaskFilters.tsx`
+- [X] T019 [US3] Connect active filters and filtered task rendering in `app/page.tsx`
+- [X] T020 [US3] Add no-tasks and no-matching-tasks empty states in `components/TaskList.tsx`
+- [X] T021 [US3] Manually validate quickstart scenarios 5, 6, 7, 8, and 9 using `specs/001-task-manager/quickstart.md`
 
 **Checkpoint**: All user stories work and have been manually validated.
 
@@ -103,11 +103,11 @@
 
 **Purpose**: Improve readability, accessibility, responsive behavior, and documentation without expanding scope.
 
-- [ ] T022 [P] Review labels, keyboard flow, and form feedback accessibility in `components/TaskForm.tsx`
-- [ ] T023 [P] Review labels, keyboard flow, and filter control accessibility in `components/TaskFilters.tsx`
-- [ ] T024 [P] Polish task card spacing, long text wrapping, and responsive layout in `app/globals.css`
-- [ ] T025 Refactor duplicated labels or option arrays into shared constants in `types/task.ts`
-- [ ] T026 Run the full manual validation checklist from `specs/001-task-manager/quickstart.md`
+- [X] T022 [P] Review labels, keyboard flow, and form feedback accessibility in `components/TaskForm.tsx`
+- [X] T023 [P] Review labels, keyboard flow, and filter control accessibility in `components/TaskFilters.tsx`
+- [X] T024 [P] Polish task card spacing, long text wrapping, and responsive layout in `app/globals.css`
+- [X] T025 Refactor duplicated labels or option arrays into shared constants in `types/task.ts`
+- [X] T026 Run the full manual validation checklist from `specs/001-task-manager/quickstart.md`
 
 ---
 
