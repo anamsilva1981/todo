@@ -24,7 +24,7 @@
 
 **Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
 
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]
+**Validation**: Manual validation only; automated tests are not used in this project
 
 **Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
 
@@ -40,7 +40,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Clean Code First: names, functions, and responsibilities are clear and direct.
+- Small and Simple Scope: no speculative layers, frameworks, or infrastructure.
+- Manual Validation Only: no automated tests, test frameworks, or coverage gates.
+- Readable Structure: files and directories follow the simplest useful ownership boundary.
+- Minimal Dependencies: each new dependency is justified against built-in or existing options.
 
 ## Project Structure
 
@@ -72,32 +76,25 @@ src/
 ├── cli/
 └── lib/
 
-tests/
-├── contract/
-├── integration/
-└── unit/
-
 # [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
 backend/
 ├── src/
 │   ├── models/
 │   ├── services/
 │   └── api/
-└── tests/
 
 frontend/
 ├── src/
 │   ├── components/
 │   ├── pages/
 │   └── services/
-└── tests/
 
 # [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
 api/
 └── [same as backend above]
 
 ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+└── [platform-specific structure: feature modules, UI flows]
 ```
 
 **Structure Decision**: [Document the selected structure and reference the real

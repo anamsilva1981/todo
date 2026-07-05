@@ -148,9 +148,9 @@ Command ends after Phase 2 planning. Report branch, IMPL_PLAN path, and generate
 
 3. **Create quickstart validation guide** → `quickstart.md`:
    - Document runnable validation scenarios that prove the feature works end-to-end
-   - Include prerequisites, setup commands, test/run commands, and expected outcomes
+   - Include prerequisites, setup commands, run commands, manual validation steps, and expected outcomes
    - Use links or references to contracts and data model details instead of duplicating them
-   - Do not include full implementation code, model/service/controller bodies, migrations, or complete test suites
+   - Do not include full implementation code, model/service/controller bodies, migrations, or automated test suites
    - Keep this artifact as a validation/run guide; implementation details belong in `tasks.md` and the implementation phase
 
 **Output**: data-model.md, /contracts/*, quickstart.md

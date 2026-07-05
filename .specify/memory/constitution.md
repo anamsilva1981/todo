@@ -1,50 +1,90 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+Version change: template -> 1.0.0
+Modified principles:
+- PRINCIPLE_1_NAME -> I. Clean Code First
+- PRINCIPLE_2_NAME -> II. Small and Simple Scope
+- PRINCIPLE_3_NAME -> III. Manual Validation Only
+- PRINCIPLE_4_NAME -> IV. Readable Structure
+- PRINCIPLE_5_NAME -> V. Minimal Dependencies
+Added sections:
+- Project Constraints
+- Development Workflow
+Removed sections:
+- None
+Templates requiring updates:
+- UPDATED .specify/templates/plan-template.md
+- UPDATED .specify/templates/spec-template.md
+- UPDATED .specify/templates/tasks-template.md
+- NOT PRESENT .specify/templates/commands/*.md
+- UPDATED runtime guidance files checked; no blocking template references remain
+Follow-up TODOs:
+- None
+-->
+# Todo Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Clean Code First
+Code MUST be easy to read before it is clever. Names MUST describe intent,
+functions MUST stay small, and duplicated logic MUST be extracted only when the
+shared behavior is real. Comments MUST explain non-obvious decisions, not repeat
+what the code already says. Rationale: this project is small enough that clarity
+and directness are the primary quality controls.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Small and Simple Scope
+Every feature MUST choose the smallest useful implementation that satisfies the
+current specification. New layers, frameworks, abstractions, background jobs,
+or infrastructure MUST be justified by an immediate requirement in the plan.
+Rationale: the project is intended to remain small, approachable, and cheap to
+change.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Manual Validation Only
+The project MUST NOT introduce automated test suites, test frameworks, coverage
+gates, or generated test tasks. Each feature MUST instead define concise manual
+validation steps with expected outcomes in its plan, quickstart, or task list.
+Rationale: the project explicitly optimizes for a lightweight workflow where
+human validation is sufficient.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Readable Structure
+Files and directories MUST be organized by the simplest recognizable ownership
+boundary for the feature. A file MUST NOT mix unrelated responsibilities, and a
+new module MUST have a clear reason to exist. Rationale: simple structure keeps
+navigation fast and makes future changes less risky.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Minimal Dependencies
+Dependencies MUST be added only when they remove more complexity than they add.
+Before adding a dependency, the plan MUST record why built-in language or
+existing project capabilities are insufficient. Rationale: each dependency
+increases maintenance, upgrade, and comprehension cost.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Project Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+The project MUST remain a small application with a minimal runtime footprint.
+Feature work MUST avoid speculative extensibility, unused configuration,
+unnecessary persistence, and multi-package structure unless the specification
+requires them. User-facing behavior MUST be verifiable through manual scenarios
+and acceptance criteria, not through automated tests.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Planning MUST include a constitution check covering clean code, simplicity,
+manual validation, readable structure, and dependency impact. Tasks MUST be
+small, ordered by user value, and written with exact file paths. Implementation
+MUST proceed in thin increments that can be manually validated before moving to
+the next increment. Refactoring is allowed when it improves readability or
+removes real duplication without expanding scope.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes conflicting templates, generated plans, and local
+workflow habits. Amendments MUST be documented in this file with a Sync Impact
+Report and MUST update dependent templates in the same change.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Versioning follows semantic versioning. MAJOR changes remove or redefine a core
+principle, MINOR changes add principles or materially expand governance, and
+PATCH changes clarify wording without changing obligations. Each feature plan
+and task list MUST review compliance with the current constitution before
+implementation begins.
+
+**Version**: 1.0.0 | **Ratified**: 2026-07-05 | **Last Amended**: 2026-07-05
